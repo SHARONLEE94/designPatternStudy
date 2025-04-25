@@ -25,7 +25,6 @@ public class BookShelfIterator implements Iterator<Book> {
         if(!hasNext()) {
             throw new NoSuchElementException();
         }
-
         Book book = bookShelf.getBook(index);
         index++;
 

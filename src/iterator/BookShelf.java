@@ -6,6 +6,7 @@ public class BookShelf implements Iterable<Book> {
     private Book[] books;
     private int last = 0;
 
+    // 객체의 배열 크기 지정
     public BookShelf(int maxsize) {
         this.books = new Book[maxsize];
     }
@@ -25,6 +26,6 @@ public class BookShelf implements Iterable<Book> {
 
     @Override
     public Iterator<Book> iterator() {
-        return null;
+        return new BookShelfIterator(this);
     }
 }
